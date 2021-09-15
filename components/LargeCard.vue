@@ -1,5 +1,5 @@
 <template>
-  <div class="card">
+  <nuxt-link :to="`/products/${card.id}`" class="card">
     <img
       :src="require(`@/assets/images/${card.image || 'fel.jpg'}`)"
       alt=""
@@ -11,7 +11,7 @@
     <p class="snippet">
       {{ card.snippet }}
     </p>
-  </div>
+  </nuxt-link>
 </template>
 
 <script>
