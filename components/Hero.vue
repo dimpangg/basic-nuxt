@@ -1,15 +1,14 @@
 <template>
-  <div class="container Hero">
+  <div class="Hero container">
     <div class="text-container">
       <h1 class="header">Find your Fire Extinguisher</h1>
       <p class="snippet">
-        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Labore dolorum
-        accusamus culpa aliquam quod. Ea, obcaecati nostrum recusandae quibusdam
-        quod, dolor, harum unde sint a aperiam numquam! Error, quisquam non!
+        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Iste iusto
+        illum quidem asperiores, cum nisi aperiam eius ipsa sapiente odit!
       </p>
-      <button class="btn button">Start Looking</button>
+      <button class="button btn">Start Looking</button>
     </div>
-    <img src="~/assets/svg/fire.svg" alt="fire" />
+    <img class="image" src="~assets/svg/fire.svg" alt="fire extinguisher" />
   </div>
 </template>
 
@@ -18,9 +17,13 @@ export default {};
 </script>
 
 <style scoped>
+.container {
+  margin-left: 3rem;
+  margin-right: 3rem;
+}
 .Hero {
-  height: 50vh;
-  position: relative;
+  /* height: 50vh; */
+  /* position: relative; */
   display: flex;
   padding: 5rem 0;
   align-items: flex-start;
@@ -32,14 +35,14 @@ export default {};
 }
 .header {
   font-weight: 900;
-  font-size: 5rem;
+  /* font-size: 5rem; */
 }
 .snippet {
   color: grey;
   font-size: 1.25rem;
 }
 .image {
-  width: 27.5rem;
+  width: 18rem;
   margin-top: 2rem;
 }
 .overlay {
