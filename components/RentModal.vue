@@ -3,7 +3,7 @@
     <b-button id="show-btn" @click="showModal">Rent</b-button>
 
     <b-modal ref="my-modal" hide-footer title="Using Component Methods">
-      <div class="calendar-container">
+      <div class="calendar-container py-3">
         <div class="text-container">
           <p>
             Lorem ipsum dolor sit amet consectetur adipisicing elit. Assumenda,
@@ -14,13 +14,20 @@
         </div>
         <vc-date-picker :value="null" color="indigo" is-dark is-range />
       </div>
-      <b-button id="show-btn" variant="outline-danger">Order</b-button>
+      <b-button
+        id="show-btn"
+        variant="outline-danger"
+        @click="() => rentButton()"
+        >Order</b-button
+      >
     </b-modal>
   </div>
 </template>
 
 <script>
+import { mapMutations } from "vuex";
 export default {
+  props: ["product"],
   methods: {
     showModal() {
       this.$refs["my-modal"].show();
@@ -32,6 +39,11 @@ export default {
       // We pass the ID of the button that we want to return focus to
       // when the modal has hidden
       this.$refs["my-modal"].toggle("#toggle-btn");
+    },
+    ...mapMutations(["addItem"]),
+    rentButton() {
+      this.addItem(this.product.id);
+      this.hideModal();
     },
   },
 };
