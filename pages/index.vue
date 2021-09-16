@@ -1,7 +1,6 @@
 <template>
   <div>
-    <Nav />
-    <b-container fluid>
+    <b-container>
       <hero />
       <LargeCardDisplay
         v-for="cardInfo in largeCardInfo"

@@ -7,8 +7,12 @@
 
       <b-collapse id="nav-collapse" is-nav>
         <b-navbar-nav class="ml-auto">
-          <nuxt-link class="nav-link" to="/products">Products</nuxt-link>
-          <nuxt-link class="nav-link" to="/my-items">My Item</nuxt-link>
+          <nuxt-link class="nav-link" active-class="active" to="/products"
+            >Products</nuxt-link
+          >
+          <nuxt-link class="nav-link" active-class="active" to="/my-items"
+            >My Item</nuxt-link
+          >
         </b-navbar-nav>
       </b-collapse>
     </b-navbar>
